@@ -50,3 +50,9 @@ ________________________________________________
 
 Mở browser truy cập panel.php
 Ta được: Invalid parameter, please ensure accessID is set correctly
+
+Thử tiếp: ffuf -u  http://154.57.164.65:32853/admin/panel.php?accessID=FUZZ -v -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt -fw 8
+=> tìm được getaccess
+
+Try cập: http://154.57.164.65:32853/admin/panel.php?accessID=getaccess
+Ta được: Head on over to the fuzzing_fun.htb vhost for some more fuzzing fun!

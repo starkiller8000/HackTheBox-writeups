@@ -5,3 +5,17 @@ we have:
 .htpasswd               [Status: 403, Size: 281, Words: 20, Lines: 10, Duration: 4435ms]
 admin                   [Status: 301, Size: 323, Words: 20, Lines: 10, Duration: 242ms]
 server-status           [Status: 403, Size: 281, Words: 20, Lines: 10, Duration: 242ms]
+
+Use: python3 api_fuzzer.py http://154.57.164.64:31191
+we have:
+Status code counts:
+404: 4747
+403: 4
+200: 1
+Found valid endpoints:
+- http://154.57.164.64:31191/admin
+Unusual status codes:
+403: http://154.57.164.64:31191/.hta
+403: http://154.57.164.64:31191/.htaccess
+403: http://154.57.164.64:31191/.htpasswd
+403: http://154.57.164.64:31191/server-status

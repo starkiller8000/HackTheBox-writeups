@@ -19,3 +19,31 @@ Unusual status codes:
 403: http://154.57.164.64:31191/.htaccess
 403: http://154.57.164.64:31191/.htpasswd
 403: http://154.57.164.64:31191/server-status
+
+Now use: ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt -u http://154.57.164.64:31191/FUZZ -e .php,.html,.txt,.bak,.js -v -recursion -recursion-depth 2 -mc 200
+:: Method           : GET
+ :: URL              : http://154.57.164.64:31191/FUZZ
+ :: Wordlist         : FUZZ: /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt
+ :: Extensions       : .php .html .txt .bak .js 
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200
+________________________________________________
+
+[INFO] Adding a new job to the queue: http://154.57.164.64:31191/admin/FUZZ
+
+[INFO] Starting queued job on target: http://154.57.164.64:31191/admin/FUZZ
+
+[Status: 200, Size: 13, Words: 2, Lines: 1, Duration: 214ms]
+| URL | http://154.57.164.64:31191/admin/index.php
+    * FUZZ: index.php
+
+[Status: 200, Size: 13, Words: 2, Lines: 1, Duration: 254ms]
+| URL | http://154.57.164.64:31191/admin/index.php
+    * FUZZ: index.php
+
+[Status: 200, Size: 58, Words: 8, Lines: 1, Duration: 258ms]
+| URL | http://154.57.164.64:31191/admin/panel.php
+    * FUZZ: panel.php

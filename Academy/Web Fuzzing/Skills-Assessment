@@ -47,3 +47,6 @@ ________________________________________________
 [Status: 200, Size: 58, Words: 8, Lines: 1, Duration: 258ms]
 | URL | http://154.57.164.64:31191/admin/panel.php
     * FUZZ: panel.php
+
+Mở browser truy cập panel.php
+Ta được: Invalid parameter, please ensure accessID is set correctly

@@ -1,0 +1,7 @@
+Use: ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt -u http://154.57.164.64:31191/FUZZ
+we have: 
+.htaccess               [Status: 403, Size: 281, Words: 20, Lines: 10, Duration: 509ms]
+.hta                    [Status: 403, Size: 281, Words: 20, Lines: 10, Duration: 2454ms]
+.htpasswd               [Status: 403, Size: 281, Words: 20, Lines: 10, Duration: 4435ms]
+admin                   [Status: 301, Size: 323, Words: 20, Lines: 10, Duration: 242ms]
+server-status           [Status: 403, Size: 281, Words: 20, Lines: 10, Duration: 242ms]

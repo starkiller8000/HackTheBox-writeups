@@ -63,3 +63,7 @@ index.php nói có thể ở vhost này hoặc không
 
 Dùng gobuster vhost -u http://fuzzing_fun.htb:32761 -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt --append-domain --exclude-status 403,400
 Ta được: hidden.fuzzing_fun.htb:32761 Status: 200 [Size: 45]
+
+Dùng: ffuf -u http://hidden.fuzzing_fun.htb:32761/godeep/FUZZ -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt -recursion -recursion-depth 4
+=> http://hidden.fuzzing_fun.htb:32761/godeep/stoneedge/bbclone/typo3/index.php
+BINGO!

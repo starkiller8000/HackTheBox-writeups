@@ -56,3 +56,10 @@ Thử tiếp: ffuf -u  http://154.57.164.65:32853/admin/panel.php?accessID=FUZZ 
 
 Try cập: http://154.57.164.65:32853/admin/panel.php?accessID=getaccess
 Ta được: Head on over to the fuzzing_fun.htb vhost for some more fuzzing fun!
+
+Sau khi cập nhật fuzzing_fun.htb vào /etc/hosts, ta dùng: ffuf -u http://fuzzing_fun.htb:32761/FUZZ -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt
+=> tìm ra index.php
+index.php nói có thể ở vhost này hoặc không
+
+Dùng gobuster vhost -u http://fuzzing_fun.htb:32761 -w /usr/share/wordlists/seclists/Discovery/Web-Content/common.txt --append-domain --exclude-status 403,400
+Ta được: hidden.fuzzing_fun.htb:32761 Status: 200 [Size: 45]

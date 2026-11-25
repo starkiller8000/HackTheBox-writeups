@@ -3,4 +3,4 @@
 
 curl -s http://10.129.2.37:80 | html2text | grep -i 'inlanefreight'
 
-info@inlanefreight.local Contact Support
+=> info@inlanefreight.local Contact Support

